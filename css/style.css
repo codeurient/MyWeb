@@ -52,17 +52,16 @@ ul
     z-index: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, transform 1s ease; 
+    transform: translateX(100%);
 }
 .section.back-section
 {
     z-index: 1;
 }
-.section.active
-{
-    z-index: 1;
-    opacity: 1;
-    animation: slideSection 1s ease;
+.section.active {
+    opacity: 1; 
+    transform: translateX(0%); 
 }
 @keyframes slideSection 
 {
@@ -322,7 +321,7 @@ h3.hello
 h3.hello span
 {
     font-family: 'Clicker Script', cursive;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: var(--skin-color);
 }
@@ -448,6 +447,13 @@ h3.my-profession
 {
     flex: 0 0 100%;
     max-width: 100%;
+}
+.about .about-content .skills h4
+{
+    font-weight: 600;
+    padding: 10px 0;
+    color: var(--skin-color);
+    border-bottom: 1px solid var(--bg-black-50);
 }
 .about .about-content .skills .skill-item h5
 {
