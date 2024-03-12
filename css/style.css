@@ -836,3 +836,38 @@ h3.my-profession
         max-width: 100%;
     }
 }
+
+
+
+
+.about .about-content .skills ul .contentBx
+{
+    position: relative;
+}
+.about .about-content .skills ul .contentBx h4
+{
+    position: relative;
+    cursor: pointer;
+}
+.about .about-content .skills ul .contentBx h4::before
+{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.about .about-content .skills ul .contentBx .row
+{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    padding-left: 10px;
+}
+.about .about-content .skills ul .contentBx.active .row
+{
+    height: 200px;
+}
